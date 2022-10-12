@@ -42,7 +42,7 @@ server.get('/show/:showId', async (req: Request, res: Response) => {
 
 server.get('/suggestions', async (req: Request, res: Response) => {
   const result = await tvMazeApiClient.search.shows(req.query.search as string);
-  res.send(result.map(r => r.show));
+  res.send(result.map((r) => r.show));
 });
 
 server.use(express.static(path.join(__dirname, '../', '../', 'dist')));

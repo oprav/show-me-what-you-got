@@ -25,8 +25,15 @@ if (result.data) {
 <template>
   <main>
     <Suspense>
-      <div id="shows" v-if="genres !== null && !appContext.searchResults.length">
-        <div class="genres" v-for="[genre, shows] in Object.entries(genres)" v-bind:key="genre">
+      <div
+        id="shows"
+        v-if="genres !== null && !appContext.searchResults.length"
+      >
+        <div
+          class="genres"
+          v-for="[genre, shows] in Object.entries(genres)"
+          v-bind:key="genre"
+        >
           <span class="genre-label">{{ genre }}</span>
           <ShowList :shows="shows"></ShowList>
         </div>

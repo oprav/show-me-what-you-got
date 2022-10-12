@@ -27,7 +27,11 @@ if (result.data) {
       <div class="show-stats">
         Genres:
         <div class="horizontal-list">
-          <span class="show-stat-item" v-for="genre of showDetails?.show.genres" v-bind:key="genre">
+          <span
+            class="show-stat-item"
+            v-for="genre of showDetails?.show.genres"
+            v-bind:key="genre"
+          >
             {{ genre }}
           </span>
         </div>
@@ -43,8 +47,8 @@ if (result.data) {
         <div class="horizontal-list">
           <span class="show-stat-item"></span>
           {{
-          /* @ts-ignore property name typo */
-          showDetails?.show.rating.average
+            /* @ts-ignore property name typo */
+            showDetails?.show.rating.average
           }}
         </div>
       </div>

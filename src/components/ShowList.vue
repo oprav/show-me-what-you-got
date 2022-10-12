@@ -22,12 +22,26 @@ const SLIDES_PER_VIEW_MOBILE = 1;
 </script>
 
 <template>
-  <swiper :space-between="50"
-    :slides-per-view="appStore.isInMobileViewport ? SLIDES_PER_VIEW_MOBILE : SLIDES_PER_VIEW_DESKTOP"
-    :modules="[Navigation]" navigation>
+  <swiper
+    :space-between="50"
+    :slides-per-view="
+      appStore.isInMobileViewport
+        ? SLIDES_PER_VIEW_MOBILE
+        : SLIDES_PER_VIEW_DESKTOP
+    "
+    :modules="[Navigation]"
+    navigation
+  >
     <swiper-slide v-for="show of shows" v-bind:key="show.id">
-      <RouterLink class="active" :to="{ name: 'show', params: { showId: show.id } }">
-        <img class="show-thumb" v-bind:src="show.image && show.image.medium" rel="preload" />
+      <RouterLink
+        class="active"
+        :to="{ name: 'show', params: { showId: show.id } }"
+      >
+        <img
+          class="show-thumb"
+          v-bind:src="show.image && show.image.medium"
+          rel="preload"
+        />
       </RouterLink>
     </swiper-slide>
   </swiper>

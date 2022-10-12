@@ -4,7 +4,7 @@ import { RouterView, useRoute } from 'vue-router';
 import ShowSearchInput from './components/ShowSearchInput.vue';
 import { APP_STORE_KEY } from './symbols';
 import useWindowResize from './composables/onWindowResize';
-import VueSimpleSpinner from './components/Spinner.vue';
+import VueSimpleSpinner from './components/SimpleSpinner.vue';
 
 const TABLET_BREAKPOINT = 767;
 const { width } = useWindowResize();
@@ -120,7 +120,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-
-
 }
 </style>
